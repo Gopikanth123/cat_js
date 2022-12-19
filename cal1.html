@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.length
+{
+  text-align:center;
+  width:30%;
+  width:30%;
+  height:90%;
+}
+.set{
+   margin-left:40%;
+}
+</style>
+</head>
+<body>
+<div class="set">
+<table border="5" class="length">
+<caption> CALCULATOR </caption>
+<tr>
+<td colspan="3"><input type="text" placeholder="enter" style="text-align:right;" id="inp"></td>
+<td><button onclick="ac()"> AC </button></td>
+</tr>
+<tr>
+<td><button onclick="input('1')"> 1 </button></td>
+<td><button onclick="input('2')"> 2 </button></td>
+<td><button onclick="input('3')"> 3 </button></td>
+<td><button onclick="input('+')"> + </button></td>
+</tr>
+<tr>
+<td><button onclick="input('4')"> 4 </button></td>
+<td><button onclick="input('5')"> 5 </button></td>
+<td><button onclick="input('6')"> 6 </button></td>
+<td><button onclick="input('-')"> - </button></td>
+</tr>
+<tr>
+<td><button onclick="input('7')"> 7 </button></td>
+<td><button onclick="input('8')"> 8 </button></td>
+<td><button onclick="input('9')"> 9 </button></td>
+<td><button onclick="input('*')"> * </button></td>
+</tr>
+<tr>
+<td><button onclick="cal()"> = </button></td>
+<td><button onclick="input('0')"> 0 </button></td>
+<td><button onclick="input('%')"> % </button></td>
+<td><button onclick="input('/')"> / </button></td>
+</tr>
+</div>
+<br>
+<button onclick="print()"> print </button>
+<script>
+function ac()
+{
+  document.getElementById("inp").value="";
+}
+function input(res)
+{
+  document.getElementById("inp").value+=res;
+}
+function cal()
+{
+  let r=eval(document.getElementById("inp").value);
+  document.getElementById("inp").value=r;
+}
+</script>
+</body>
+</html>
